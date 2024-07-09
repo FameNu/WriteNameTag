@@ -1,0 +1,5 @@
+*.venv
+*.xlsx
+.DS_Store
+
+output/
