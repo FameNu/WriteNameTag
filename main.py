@@ -31,7 +31,7 @@ def write_name_to_image(image, name):
     text_y = (image.height - text_height) // 100 * 45
 
     # Write text to the image
-    draw.text((text_x, text_y), name, fill="black", font=font)
+    draw.text((text_x, text_y), name, fill="black", font=font, align="center")
 
     return image
 
