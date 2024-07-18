@@ -40,15 +40,16 @@ for sheet_name in sheet_names:
     names = data_col.iloc[:, 1] # Read on column B (index = 1)
 
     # Create folder for each sheet
-    output_department_folder = os.path.join(output_folder, sheet_name)
-    os.makedirs(output_department_folder, exist_ok=True)
+    # output_department_folder = os.path.join(output_folder, sheet_name)
+    # os.makedirs(output_department_folder, exist_ok=True)
 
     for bg_image in images:
         if sheet_name.lower() in bg_image.filename.lower():
             for i, name in enumerate(names):
                 image = bg_image.copy()
                 updated_image = write_name_to_image(image, name)
-                output_path = os.path.join(output_department_folder, f'{sheet_name}-{i+1}-{name}.png')
+                # output_path = os.path.join(output_department_folder, f'{sheet_name}-{i+1}-{name}.png')
+                output_path = os.path.join(output_folder, f'{sheet_name}-{i+1}-{name}.png')
                 updated_image.save(output_path)
             
             break
