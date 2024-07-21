@@ -2,4 +2,4 @@
 *.xlsx
 .DS_Store
 
-output/
+output*/
